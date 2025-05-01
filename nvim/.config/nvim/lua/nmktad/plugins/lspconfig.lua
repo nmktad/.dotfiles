@@ -169,6 +169,7 @@ return {
       -- for many setups, the LSP (`tsserver`) will work just fine
       -- but check this if it's good. https://github.com/pmizio/typescript-tools.nvim
       ts_ls = {},
+      tailwindcss = {},
       biome = {
         cmd = { 'biome', 'lsp-proxy' },
         filetypes = {

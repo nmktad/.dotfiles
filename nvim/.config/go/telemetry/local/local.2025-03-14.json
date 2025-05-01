@@ -1,0 +1,100 @@
+{
+ "Week": "2025-03-14",
+ "LastWeek": "",
+ "X": 0.5335651157809977,
+ "Programs": [
+  {
+   "Program": "cmd/asm",
+   "Version": "go1.23.5",
+   "GoVersion": "go1.23.5",
+   "GOOS": "linux",
+   "GOARCH": "amd64",
+   "Counters": {},
+   "Stacks": {}
+  },
+  {
+   "Program": "cmd/compile",
+   "Version": "go1.23.5",
+   "GoVersion": "go1.23.5",
+   "GOOS": "linux",
+   "GOARCH": "amd64",
+   "Counters": {
+    "compile/flag:buildid": 2,
+    "compile/flag:c": 2,
+    "compile/flag:complete": 2,
+    "compile/flag:goversion": 2,
+    "compile/flag:importcfg": 2,
+    "compile/flag:lang": 2,
+    "compile/flag:nolocalimports": 2,
+    "compile/flag:o": 2,
+    "compile/flag:p": 2,
+    "compile/flag:pack": 2,
+    "compile/flag:trimpath": 2,
+    "compile/invocations": 27
+   },
+   "Stacks": {}
+  },
+  {
+   "Program": "cmd/go",
+   "Version": "go1.23.5",
+   "GoVersion": "go1.23.5",
+   "GOOS": "linux",
+   "GOARCH": "amd64",
+   "Counters": {
+    "go/buildcache/hit": 39,
+    "go/buildcache/miss": 6,
+    "go/env/flag:json": 13,
+    "go/goroot:usr-local-go": 37,
+    "go/invocations": 37,
+    "go/list/flag:compiled": 5,
+    "go/list/flag:deps": 5,
+    "go/list/flag:e": 11,
+    "go/list/flag:export": 5,
+    "go/list/flag:f": 11,
+    "go/list/flag:find": 5,
+    "go/list/flag:json": 5,
+    "go/list/flag:pgo": 5,
+    "go/list/flag:test": 5,
+    "go/mod-tidy/flag:modfile": 4,
+    "go/mode:gopath": 6,
+    "go/mode:module": 31,
+    "go/platform/host/linux/major-version:5": 37,
+    "go/platform/host/linux/version:5-15": 37,
+    "go/platform/target/goamd64:v1": 37,
+    "go/platform/target/goarch:amd64": 37,
+    "go/platform/target/goos:linux": 37,
+    "go/subcommand:env": 14,
+    "go/subcommand:list": 16,
+    "go/subcommand:mod-tidy": 4,
+    "go/subcommand:version": 3
+   },
+   "Stacks": {}
+  },
+  {
+   "Program": "golang.org/x/tools/gopls",
+   "Version": "v0.18.1",
+   "GoVersion": "go1.23.5",
+   "GOOS": "linux",
+   "GOARCH": "amd64",
+   "Counters": {
+    "gopls/client:neovim": 1,
+    "gopls/gotoolchain:auto": 1,
+    "gopls/goversion:1.23": 1,
+    "gopls/telemetryprompt/attempts:0": 1
+   },
+   "Stacks": {}
+  },
+  {
+   "Program": "cmd/link",
+   "Version": "go1.23.5",
+   "GoVersion": "go1.23.5",
+   "GOOS": "linux",
+   "GOARCH": "amd64",
+   "Counters": {
+    "link/invocations": 2
+   },
+   "Stacks": {}
+  }
+ ],
+ "Config": "v0.0.0-0"
+}

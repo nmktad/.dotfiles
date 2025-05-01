@@ -10,6 +10,7 @@ return {
       json = { 'jsonlint' },
       -- python = { 'pylint' },
       go = { 'golangcilint' },
+      proto = { 'protolint' },
     }
 
     -- Create autocommand which carries out the actual linting

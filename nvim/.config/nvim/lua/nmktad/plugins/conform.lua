@@ -17,10 +17,11 @@ return { -- Autoformat
       lua = { 'stylua' },
       -- You can use a sub-list to tell conform to run *until* a formatter
       -- is found.
-      javascript = { 'prettierd' },
-      typescript = { 'prettierd' },
-      javascriptreact = { 'prettierd' },
-      typescriptreact = { 'prettierd' },
+      javascript = { 'prettierd', 'biome' },
+      markdown = { 'prettierd' },
+      typescript = { 'prettierd', 'biome' },
+      javascriptreact = { 'prettierd', 'biome' },
+      typescriptreact = { 'prettierd', 'biome' },
 
       -- Conform will run multiple formatters sequentially
       go = { 'goimports', 'gofumpt', 'gopls' },
