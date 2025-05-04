@@ -6,21 +6,47 @@ return { -- Autoformat
     {
       '<leader>f',
       function()
-        require('conform').format { async = true, lsp_fallback = true }
+        require('conform').format { async = true, lsp_format = 'fallback' }
       end,
       mode = '',
       desc = '[F]ormat buffer',
     },
   },
   opts = {
+    notify_on_error = false,
+    format_on_save = function(bufnr)
+      -- Disable "format_on_save lsp_fallback" for languages that don't
+      -- have a well standardized coding style. You can add additional
+      -- languages here or re-enable it for the disabled ones.
+      local disable_filetypes = { c = true, cpp = true }
+      if disable_filetypes[vim.bo[bufnr].filetype] then
+        return nil
+      else
+        return {
+          timeout_ms = 500,
+          lsp_format = 'fallback',
+        }
+      end
+    end,
     formatters_by_ft = {
       lua = { 'stylua' },
+      -- Conform can also run multiple formatters sequentially
+      -- python = { "isort", "black" },
+      --
+      -- You can use 'stop_after_first' to run the first available formatter from the list
+      -- javascript = { "prettierd", "prettier", stop_after_first = true },
       -- You can use a sub-list to tell conform to run *until* a formatter
       -- is found.
-      javascript = { 'prettierd' },
-      typescript = { 'prettierd' },
-      javascriptreact = { 'prettierd' },
-      typescriptreact = { 'prettierd' },
+      -- You can use 'stop_after_first' to run the first available formatter from the list
+      javascript = { 'prettierd', 'prettier', 'biome' },
+      typescript = { 'prettierd', 'prettier', 'biome' },
+      javascriptreact = { 'prettierd', 'prettier', 'biome' },
+      typescriptreact = { 'prettierd', 'prettier', 'biome' },
+      -- javascript = { 'prettierd', 'biome' },
+      -- typescript = { 'prettierd', 'biome' },
+      -- javascriptreact = { 'prettierd', 'biome' },
+      -- typescriptreact = { 'prettierd', 'biome' },
+      markdown = { 'prettierd' },
 
       -- Conform will run multiple formatters sequentially
       go = { 'goimports', 'gofumpt', 'gopls' },
@@ -48,25 +74,5 @@ return { -- Autoformat
       -- have other formatters configured.
       ['_'] = { 'trim_whitespace' },
     },
-
-    -- Set this to change the default values when calling conform.format()
-    -- This will also affect the default values for format_on_save/format_after_save
-    default_format_opts = {
-      lsp_format = 'fallback',
-    },
-
-    format_on_save = function(bufnr)
-      -- Disable "format_on_save lsp_fallback" for languages that don't
-      -- have a well standardized coding style. You can add additional
-      -- languages here or re-enable it for the disabled ones.
-      local disable_filetypes = { c = true, cpp = true }
-      return {
-        timeout_ms = 500,
-        lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
-      }
-    end,
-
-    notify_on_error = false,
-    notify_no_formatters = true,
   },
 }
