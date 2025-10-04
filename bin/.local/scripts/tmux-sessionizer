@@ -8,6 +8,7 @@ search_dirs=(
   "$HOME/workspaces/personal"
   "$HOME/workspaces/sandbox"
   "$HOME/workspaces/org/work"
+  "$HOME/workspaces/org/cnam/"
   "$HOME/workspaces/org/zewdlabs/"
 )
 
