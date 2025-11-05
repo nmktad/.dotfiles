@@ -218,6 +218,7 @@ return {
         biome = {},
         clangd = {},
         terraform = {},
+        julials = {},
         gopls = {
           settings = {
             gopls = {
