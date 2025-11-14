@@ -112,21 +112,12 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=5"
 
 eval "$(starship init zsh)"
 
-# fnm
-FNM_PATH="/home/nmktad/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="/home/nmktad/.local/share/fnm:$PATH"
-  eval "`fnm env`"
-fi
-
 export PATH="/home/nmktad/.local/scripts:$PATH"
 bindkey -s ^f "tmux-sessionizer\n"
 
-export GOPATH=$HOME/go
-
-# bun completions
-[ -s "/home/nmktad/.bun/_bun" ] && source "/home/nmktad/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# fnm
+FNM_PATH="/home/nmktad/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
