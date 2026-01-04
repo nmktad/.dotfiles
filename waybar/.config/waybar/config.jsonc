@@ -5,8 +5,7 @@
   "spacing" : 0,
   "modules-left": [
   "hyprland/workspaces",
-  "custom/uptime",
-  "cpu"
+  "custom/uptime"
   ],
 
   "modules-center": ["clock"],
@@ -53,7 +52,7 @@
   },
 
   "clock": {
-    "timezone": "Asia/Kolkata",
+    "timezone": "Europe/Paris",
     "tooltip": false,
     "format": "{:%H:%M:%S  -  %A, %d}",
     "interval": 1
