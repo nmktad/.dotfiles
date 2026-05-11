@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+rfkill unblock wifi
+/home/nmktad/.local/scripts/launch-or-focus-tui impala

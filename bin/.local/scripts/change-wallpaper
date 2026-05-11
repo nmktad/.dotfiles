@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+DIR="$HOME/.wallpapers/converted/"
+
+WALL=$(find "$DIR" -type f | shuf -n 1)
+
+awww img "$WALL" --transition-type center

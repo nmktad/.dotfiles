@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+DEV="asus::kbd_backlight"
+
+current=$(brightnessctl -d $DEV g)
+
+next=$(( (current + 1) % 4 ))
+
+brightnessctl -d $DEV set $next

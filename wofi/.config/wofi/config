@@ -1,0 +1,15 @@
+style = ~/.config/wofi/menu.css
+
+show=drun
+width=500
+height=500
+always_parse_args=true
+show_all=false
+print_command=true
+insensitive=true
+prompt= Search for apps
+allow_images=true
+image_size=32
+gtk_dark=true
+normal_window=true
+no_actions=true
